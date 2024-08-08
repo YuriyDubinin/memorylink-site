@@ -1,0 +1,17 @@
+.middle-block {
+    width: 100%;
+    min-height: 620px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    @media (max-width: 1024px) {
+    }
+
+    @media (max-width: 600px) {
+        min-height: auto;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+    }
+}
