@@ -57,6 +57,7 @@
 
     &_locked {
         cursor: not-allowed;
+        opacity: 0.4;
         svg {
             width: 20px;
             height: 20px;
@@ -115,11 +116,11 @@
 // mob-menu
 .main-header__mob-menu {
     position: absolute;
-    top: 65px;
+    top: 58px;
     left: -82vw;
     width: 100vw;
     background-color: var(--app--mob-menu-background);
-    z-index: 4;
+    z-index: 3;
     height: 0%;
     opacity: 0;
     animation: mob-menu-appearance 0.3s ease-out forwards;
@@ -128,6 +129,7 @@
 }
 
 .main-header__mob-menu-item {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,6 +139,10 @@
     font-weight: 600;
     letter-spacing: 2px;
     border-bottom: 1px solid var(--grey-ce);
+
+    &_locked {
+        opacity: 0.4;
+    }
 }
 
 @keyframes mob-menu-appearance {

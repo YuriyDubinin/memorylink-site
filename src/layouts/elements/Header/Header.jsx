@@ -12,7 +12,7 @@ import Modal from '../../../components/Modal/Modal';
 
 const Header = ({scrollToCoordinates}) => {
     const [loginModal, setLoginModal] = useState(false);
-    const [menuSHown, setMenuShown] = useState(false);
+    const [menuShown, setMenuShown] = useState(false);
 
     return (
         <div className="main-header">
@@ -79,19 +79,51 @@ const Header = ({scrollToCoordinates}) => {
                     <div className="main-header__burger">
                         <div
                             className="main-header__bar-icon"
-                            onClick={() => setMenuShown(!menuSHown)}
+                            onClick={() => setMenuShown(!menuShown)}
                         >
                             <ListIcon />
                         </div>
-                        {menuSHown && (
+                        {menuShown && (
                             <ul className="main-header__mob-menu">
-                                <li className="main-header__mob-menu-item">Ознакомиться</li>
-                                <li className="main-header__mob-menu-item">О нас</li>
-                                <li className="main-header__mob-menu-item">Цель</li>
-                                <li className="main-header__mob-menu-item">
+                                <li
+                                    className="main-header__mob-menu-item"
+                                    onClick={() => {
+                                        scrollToCoordinates(0, 1690);
+                                        setMenuShown(false);
+                                    }}
+                                >
+                                    Ознакомиться
+                                </li>
+                                <li
+                                    className="main-header__mob-menu-item"
+                                    onClick={() => {
+                                        scrollToCoordinates(0, 890);
+                                        setMenuShown(false);
+                                    }}
+                                >
+                                    О нас
+                                </li>
+                                <li
+                                    className="main-header__mob-menu-item"
+                                    onClick={() => {
+                                        scrollToCoordinates(0, 2610);
+                                        setMenuShown(false);
+                                    }}
+                                >
+                                    Цель
+                                </li>
+                                <li className="main-header__mob-menu-item main-header__mob-menu-item_locked">
                                     Специальные предложения
                                 </li>
-                                <li className="main-header__mob-menu-item">Оформить</li>
+                                <li
+                                    className="main-header__mob-menu-item"
+                                    onClick={() => {
+                                        scrollToCoordinates(0, 99999);
+                                        setMenuShown(false);
+                                    }}
+                                >
+                                    Оформить
+                                </li>
                             </ul>
                         )}
                     </div>

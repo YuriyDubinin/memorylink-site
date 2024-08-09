@@ -18,7 +18,7 @@ import MissionContent from '../../content/MissionContent.json';
 import ProductContent from '../../content/ProductContent.json';
 import ContactContent from '../../content/ContactContent.json';
 
-const MainPage = () => {
+const MainPage = ({scrollToCoordinates}) => {
     return (
         <div className="main-page">
             <div className="main-page__container">
@@ -26,7 +26,10 @@ const MainPage = () => {
                     <div className="main-page__body">
                         <h2>{IntroContent.title}</h2>
                         <p>{IntroContent.text}</p>
-                        <div className="main-page__btn">
+                        <div
+                            className="main-page__btn"
+                            onClick={() => scrollToCoordinates(0, 99999)}
+                        >
                             <button>{IntroContent.button[0].title}</button>
                         </div>
                     </div>
