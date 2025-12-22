@@ -2,6 +2,7 @@
     "name": "memorylink-site",
     "version": "0.0.1",
     "description": "",
+    "author": "Yuriy Dubinin",
     "main": "index.js",
     "scripts": {
         "build": "NODE_ENV=production webpack --config webpack.config.js",
@@ -12,8 +13,6 @@
         "prettier": "npx prettier --check . --config ./.prettierrc",
         "prettier_fix": "npm run prettier -- --write"
     },
-    "author": "Yuriy Dubinin",
-    "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.22.5",
         "@babel/preset-env": "^7.22.5",
