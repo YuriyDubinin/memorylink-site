@@ -15,16 +15,13 @@
     }
 
     .main-page__image {
+        min-width: 310px;
+        min-height: 310px;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 20px 0;
-
-        svg {
-          min-width: 310px;
-          min-height: 310px;
-        }
     }
 
     .main-page__body {
