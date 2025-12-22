@@ -1,15 +1,15 @@
-FROM node
+FROM node:20
 
-WORKDIR '/src'
+WORKDIR /src
 
-COPY package.json '/src'
+COPY package.json package-lock.json /src/
 
 RUN npm install
 
 COPY . .
 
-ENV PORT 3000
+EXPOSE 8081
 
-EXPOSE $PORT
+ENV PORT=8081
 
 CMD ["npm", "run", "watch"]
