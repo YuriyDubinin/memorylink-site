@@ -124,6 +124,12 @@ const Header = ({scrollToCoordinates}) => {
                                 >
                                     Оформить
                                 </li>
+                                <li
+                                    className="main-header__mob-menu-item"
+                                    onClick={() => window.location.href = "https://www.google.com"}
+                                >
+                                    В личный кабинет
+                                </li>
                             </ul>
                         )}
                     </div>
