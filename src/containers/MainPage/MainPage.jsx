@@ -2,12 +2,12 @@ import React from 'react';
 
 import './MainPage.scss';
 
-import IntroImage1 from './assets/image-1.svg?jsx';
-import IntroImage2 from './assets/image-2.svg?jsx';
-import IntroImage3 from './assets/image-3.svg?jsx';
-import IntroImage4 from './assets/image-4.svg?jsx';
-import PhotosIcon from './assets/photos.svg?jsx';
-import VideosIcon from './assets/videos.svg?jsx';
+import IntroImage1 from './assets/image-1.svg';
+import IntroImage2 from './assets/image-2.svg';
+import IntroImage3 from './assets/image-3.svg';
+import IntroImage4 from './assets/image-4.svg';
+import PhotosIcon from './assets/photos.svg';
+import VideosIcon from './assets/videos.svg';
 
 import MiddleBlock from '../../components/MiddleBlock/MiddleBlock';
 import CreateRequestForm from './elements/CreateRequestForm/CreateRequestForm';
