@@ -7,6 +7,7 @@ import LoginIcon from './assets/business-person.svg?jsx';
 import CheckMarkIcon from './assets/check-mark-circle-color.svg?jsx';
 import CircleDisableIcon from './assets/circledisable.svg?jsx';
 import ListIcon from './assets/list.svg?jsx';
+import Logo from '../../../assets/logo_memorylink.png';
 
 import Modal from '../../../components/Modal/Modal';
 
@@ -17,7 +18,15 @@ const Header = ({scrollToCoordinates}) => {
     return (
         <div className="main-header">
             <ul className="main-header__bars">
-                <li className="main-header__bar"></li>
+                <li className="main-header__bar">
+                    <div className="main-header__logo-container">
+                        <img
+                            src={Logo}
+                            alt="MemoryLink Logo"
+                            className="main-header__logo-image"
+                        />
+                    </div>
+                </li>
                 <li className="main-header__desktop-bar">
                     <div
                         className="main-header__desktop-bar-item"
@@ -126,7 +135,9 @@ const Header = ({scrollToCoordinates}) => {
                                 </li>
                                 <li
                                     className="main-header__mob-menu-item"
-                                    onClick={() => window.location.href = "https://www.google.com"}
+                                    onClick={() =>
+                                        (window.location.href = 'https://www.google.com')
+                                    }
                                 >
                                     В личный кабинет
                                 </li>

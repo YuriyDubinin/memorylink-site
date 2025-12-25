@@ -6,7 +6,7 @@ import LockedIcon from './assets/locked-user.svg?jsx';
 import ArrowUpIcon from './assets/arrow-up.svg?jsx';
 
 import Header from './elements/Header/Header';
-import {ScrollContext} from '../helpers/scrollContext';
+import {ScrollContext} from '../context/scrollContext';
 
 const Layout = ({children}) => {
     // const [auth, setAuth] = useState(true);
@@ -20,7 +20,6 @@ const Layout = ({children}) => {
             left: x,
             behavior: 'smooth',
         });
-
     };
 
     return (

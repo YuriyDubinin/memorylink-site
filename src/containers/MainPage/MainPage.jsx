@@ -18,10 +18,16 @@ import MissionContent from '../../content/MissionContent.json';
 import ProductContent from '../../content/ProductContent.json';
 import ContactContent from '../../content/ContactContent.json';
 
-import {useScroll} from '../../helpers/scrollContext';
+import {useScroll} from '../../context/scrollContext';
 
 const MainPage = () => {
-    const {scrollToCoordinates} = useScroll();
+    const {scrollToCoordinates, mainContentRef} = useScroll();
+
+    const scrollToBottom = () => {
+        if (!mainContentRef?.current) return;
+
+        scrollToCoordinates(0, mainContentRef.current.scrollHeight);
+    };
 
     return (
         <div className="main-page">
@@ -31,10 +37,7 @@ const MainPage = () => {
                         <h2>{IntroContent.title}</h2>
                         <p>{IntroContent.text}</p>
 
-                        <div
-                            className="main-page__btn"
-                            onClick={() => scrollToCoordinates(0, 99999)}
-                        >
+                        <div className="main-page__btn" onClick={() => scrollToBottom()}>
                             <button>{IntroContent.button[0].title}</button>
                         </div>
                     </div>

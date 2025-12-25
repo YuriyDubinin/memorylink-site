@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 65px;
+    height: 85px;
     animation: neuro-light-appearance 0.3s ease 0.1s forwards;
     z-index: 3;
 }
@@ -23,6 +23,17 @@
 
 .main-header__bar-item {
     position: relative;
+}
+
+.main-header__logo-container {
+    max-width: 200px;
+    max-height: 75px;
+}
+
+.main-header__logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .main-header__burger {

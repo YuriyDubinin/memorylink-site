@@ -20,6 +20,7 @@
     height: 40px;
     transition: all 0.3s ease;
     background-color: var(--grey-e0);
+    border: 0;
 
     &:hover {
         transform: scale(1.1);
@@ -37,6 +38,9 @@
 .main-content {
     height: 100%;
     overflow-y: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; // инерция iOS
+    overscroll-behavior: contain; // защита от bounce
 }
 
 .locked__plug {
@@ -46,7 +50,7 @@
     align-items: center;
     gap: 15px;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     color: var(--grey-2);
     font-size: 20px;
 

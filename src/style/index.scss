@@ -64,63 +64,110 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+
 :root {
-    --black: #101216;
-    --white: #fff;
-    --red: #f82f3d;
-    --green: #1fb675;
-    --blue: #3e97fd;
-    --orange: #fc9c1f;
+//    --black: #101216;
+//     --white: #fff;
+//     --red: #f82f3d;
+//     --green: #1fb675;
+//     --blue: #3e97fd;
+//     --orange: #fc9c1f;
 
-    --grey-e0: #e0e0e0;
-    --grey-eb: #ebebebeb;
-    --grey-ce: #ced4da;
-    --grey-e: #eeeeee;
-    --grey-1: #b2c4d1;
-    --grey-2: #4f585e;
-    --grey-3: #5c666d;
+//     --grey-e0: #e0e0e0;
+//     --grey-eb: #ebebebeb;
+//     --grey-ce: #ced4da;
+//     --grey-e: #eeeeee;
+//     --grey-1: #b2c4d1;
+//     --grey-2: #4f585e;
+//     --grey-3: #5c666d;
 
-    --black-1: #3a4f5a;
-    --black-2: #25323a;
-    --black-3: #1e2b33;
-    --black-4: #19212b;
-    --black-5: #131d27;
+//     --black-1: #3a4f5a;
+//     --black-2: #25323a;
+//     --black-3: #1e2b33;
+//     --black-4: #19212b;
+//     --black-5: #131d27;
 
-    --blue-1: #2962ff;
-    --blue-2: #4979fd;
-    --blue-3: #3182bd;
+//     --blue-1: #2962ff;
+//     --blue-2: #4979fd;
+//     --blue-3: #3182bd;
 
-    --purple-1: #8884d8;
-    --purple-2: #7c77db;
+//     --purple-1: #8884d8;
+//     --purple-2: #7c77db;
 
-    --pink-1: #ca56ce;
+//     --pink-1: #ca56ce;
 
-    --success: var(--green);
-    --warning: var(--orange);
-    --error: var(--red);
-    --info: var(--blue);
+//     --success: var(--green);
+//     --warning: var(--orange);
+//     --error: var(--red);
+//     --info: var(--blue);
+
+  /* Backgrounds */
+  --color-bg-primary: #FBF6F2;
+  --color-bg-secondary: #EFE6E1;
+
+  /* Text */
+  --color-text-primary: #A28D83;
+  --color-text-muted: #B9A8A0;
+
+  /* Lines & decorative elements */
+  --color-line-primary: #DCC6B6;
+  --color-line-secondary: #C9B2B9;
+
+  /* Accents */
+  --color-accent-soft: #E7DCE3;
+
+  /* Borders / dividers */
+  --color-border-light: #EFE6E1;
 }
 
-// Themes
+
 body.default-theme {
-    --app-main-side-bar: var(--grey-2);
-    --app-main-border: var(--grey-1);
-    --app-main-hover: var(--grey-3);
-    --app-icon: var(--grey-e);
-    --app-main-active-btn: var(--grey-1);
-    --app--header-background: var(--grey-eb);
-    --app-background: var(--grey-e0);
-    --app-form-color: var(--grey-2);
-    --app-input-color: var(--grey-2);
-    --app-input-border-color: var(--grey-ce);
-    --app-input-btn-background: var(--blue-1);
-    --app-input-btn-hover: var(--blue-2);
-    --app-input-btn-color: var(--white);
-    --app-link-color: var(--blue-1);
-    --app-link-hover: var(--blue-2);
-    --app-text-color-1: var(--grey-3);
-    --app-text-color-2: var(--grey-1);
-    --app-graphic-color-1: var(--purple-1);
-    --app-graphic-color-2: var(--blue-3);
-    --app--mob-menu-background: var(--grey-eb);
+  /* Backgrounds */
+  --app-background: var(--color-bg-primary);
+  --app--header-background: var(--color-bg-secondary);
+  --app--mob-menu-background: var(--color-bg-secondary);
+
+  /* Text */
+  --app-text-color-1: var(--color-text-primary);
+  --app-text-color-2: var(--color-text-muted);
+  --app-form-color: var(--color-text-primary);
+  --app-input-color: var(--color-text-primary);
+
+  /* Borders / lines */
+  --app-main-border: var(--color-line-primary);
+  --app-input-border-color: var(--color-border-light);
+
+  /* Accents / interactive */
+  --app-link-color: var(--color-text-primary);
+  --app-link-hover: var(--color-text-muted);
+  --app-main-hover: var(--color-accent-soft);
+  --app-main-active-btn: var(--color-accent-soft);
+
+  /* Icons */
+  --app-icon: var(--color-text-muted);
 }
+
+
+// // Themes
+// body.default-theme {
+//     --app-main-side-bar: var(--grey-2);
+//     --app-main-border: var(--grey-1);
+//     --app-main-hover: var(--grey-3);
+//     --app-icon: var(--grey-e);
+//     --app-main-active-btn: var(--grey-1);
+//     --app--header-background: var(--grey-eb);
+//     --app-background: var(--grey-e0);
+//     --app-form-color: var(--grey-2);
+//     --app-input-color: var(--grey-2);
+//     --app-input-border-color: var(--grey-ce);
+//     --app-input-btn-background: var(--blue-1);
+//     --app-input-btn-hover: var(--blue-2);
+//     --app-input-btn-color: var(--white);
+//     --app-link-color: var(--blue-1);
+//     --app-link-hover: var(--blue-2);
+//     --app-text-color-1: var(--grey-3);
+//     --app-text-color-2: var(--grey-1);
+//     --app-graphic-color-1: var(--purple-1);
+//     --app-graphic-color-2: var(--blue-3);
+//     --app--mob-menu-background: var(--grey-eb);
+// }

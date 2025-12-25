@@ -6,7 +6,7 @@ export const useScroll = () => {
     const context = useContext(ScrollContext);
 
     if (!context) {
-        throw new Error('useScroll must be used inside scrollContext.Provider');
+        throw new Error('useScroll must be used inside ScrollContext.Provider');
     }
 
     return context;

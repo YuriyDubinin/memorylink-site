@@ -7,14 +7,13 @@ import MainPage from '../containers/MainPage/MainPage';
 import Loader from '../components/Loader/Loader';
 
 const App = () => {
-
     return (
         <BrowserRouter>
             <Layout>
                 <Suspense fallback={<Loader />}>
                     <Routes>
-                        <Route path="/" element={<Navigate to="/main" replace/>} />
-                        <Route path="/main" element={<MainPage/>}/>
+                        <Route path="/" element={<Navigate to="/main" replace />} />
+                        <Route path="/main" element={<MainPage />} />
                     </Routes>
                 </Suspense>
             </Layout>
