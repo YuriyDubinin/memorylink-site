@@ -1,37 +1,20 @@
-import React, {Suspense, useRef} from 'react';
+import React, {Suspense} from 'react';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import {Toaster} from 'react-hot-toast';
 
 import Layout from '../layouts/Layout';
 import MainPage from '../containers/MainPage/MainPage';
+import Loader from '../components/Loader/Loader';
 
 const App = () => {
-    const mainContentRef = useRef(null);
-
-    const scrollToCoordinates = (x, y) => {
-        if (mainContentRef.current) {
-            mainContentRef.current.scrollTo({
-                top: y,
-                left: x,
-                behavior: 'smooth',
-            });
-        }
-    };
 
     return (
         <BrowserRouter>
-            <Layout mainContentRef={mainContentRef}>
-                <Suspense>
+            <Layout>
+                <Suspense fallback={<Loader />}>
                     <Routes>
-                        <Route path="/" element={<Navigate to="/main" />} />
-                        <Route
-                            path="/main"
-                            element={
-                                <MainPage
-                                    scrollToCoordinates={(x, y) => scrollToCoordinates(x, y)}
-                                />
-                            }
-                        />
+                        <Route path="/" element={<Navigate to="/main" replace/>} />
+                        <Route path="/main" element={<MainPage/>}/>
                     </Routes>
                 </Suspense>
             </Layout>

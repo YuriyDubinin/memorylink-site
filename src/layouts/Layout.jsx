@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 
 import './Layout.scss';
 
@@ -6,37 +6,46 @@ import LockedIcon from './assets/locked-user.svg?jsx';
 import ArrowUpIcon from './assets/arrow-up.svg?jsx';
 
 import Header from './elements/Header/Header';
+import {ScrollContext} from '../helpers/scrollContext';
 
-const Layout = ({children, mainContentRef}) => {
-    const [auth, setAuth] = useState(true);
+const Layout = ({children}) => {
+    // const [auth, setAuth] = useState(true);
+    const mainContentRef = useRef(null);
 
     const scrollToCoordinates = (x, y) => {
-        if (mainContentRef.current) {
-            mainContentRef.current.scrollTo({
-                top: y,
-                left: x,
-                behavior: 'smooth',
-            });
-        }
+        if (!mainContentRef.current) return;
+
+        mainContentRef.current.scrollTo({
+            top: y,
+            left: x,
+            behavior: 'smooth',
+        });
+
     };
 
     return (
-        <div className="document">
-            <>
+        <ScrollContext.Provider value={{
+                mainContentRef,
+                scrollToCoordinates,
+            }}>
+            <div className="document">
                 <Header scrollToCoordinates={scrollToCoordinates} />
+    
                 <main className="main-wrapper">
-                    <div className="main-wrapper__btn" onClick={() => scrollToCoordinates(0, 0)}>
+                    <button
+                        type="button"
+                        className="main-wrapper__btn"
+                        onClick={() => scrollToCoordinates(0, 0)}
+                    >
                         <ArrowUpIcon />
-                    </div>
-                    {/* <aside>{<MainSideBar />}</aside> */}
+                    </button>
+
                     <div ref={mainContentRef} className="main-content">
-                        {React.Children.map(children, (child) =>
-                            React.cloneElement(child, {mainContentRef: mainContentRef}),
-                        )}
+                        {children}
                     </div>
                 </main>
-            </>
-        </div>
+            </div>
+        </ScrollContext.Provider>
     );
 };
 
